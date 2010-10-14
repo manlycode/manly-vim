@@ -1,3 +1,0 @@
-[submodule "bundles/fugitive"]
-	path = bundles/fugitive
-	url = http://github.com/tpope/vim-fugitive.git
