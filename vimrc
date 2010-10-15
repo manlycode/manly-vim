@@ -78,3 +78,7 @@ set statusline+=]
 set statusline+=%h%1*%m%r%w%0* " flag
 set statusline+=%= " right align
 set statusline+=%-14.(%l,%c%V%)\ %<%P " offset
+
+"NERDTree
+map <leader>d :execute 'NERDTreeToggle ' .getcwd()<CR>
+" find a way to map :NERDTreeFind (how does TM do it?)
