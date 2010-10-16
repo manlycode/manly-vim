@@ -70,7 +70,7 @@ colorscheme hemingway
 " Plugin Configuration
 "=========================================================================================
 
-"Fugitive
+" Fugitive
 set laststatus=2
 set statusline=\ "
 set statusline+=%f\ " file name
@@ -81,6 +81,10 @@ set statusline+=%h%1*%m%r%w%0* " flag
 set statusline+=%= " right align
 set statusline+=%-14.(%l,%c%V%)\ %<%P " offset
 
-"NERDTree
+" NERDTree
 map <leader>d :execute 'NERDTreeToggle ' .getcwd()<CR>
 " find a way to map :NERDTreeFind (how does TM do it?)
+
+
+" Command-t
+:set wildignore+=*.o,*.obj,.git,vendor/rails/**,*/plugins/*
