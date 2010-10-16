@@ -16,3 +16,6 @@
 [submodule "bundle/hemingway"]
 	path = bundle/hemingway
 	url = git://github.com/manlycode/hemingway.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = git://git.wincent.com/command-t.git
