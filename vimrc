@@ -75,6 +75,12 @@ colorscheme hemingway
 " Plugin Configuration
 "=========================================================================================
 
+" Command-t
+set wildignore+=*.o,*.obj,.git,vendor/rails/**,*/plugins/*
+
+" Delimit Mate
+let delimitMate_expand_cr = 1
+
 " Fugitive
 set laststatus=2
 set statusline=\ "
@@ -90,8 +96,6 @@ set statusline+=%-14.(%l,%c%V%)\ %<%P " offset
 map <leader>d :execute 'NERDTreeToggle ' .getcwd()<CR>
 " find a way to map :NERDTreeFind (how does TM do it?)
 
-" Command-t
-:set wildignore+=*.o,*.obj,.git,vendor/rails/**,*/plugins/*
-
-" Delimit Mate
-let delimitMate_expand_cr = 1
+" Tlist
+let Tlist_GainFocus_On_ToggleOpen=1
+let Tlist_WinWidth=55
