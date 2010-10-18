@@ -11,7 +11,7 @@ set guioptions-=T
 
 let mapleader=","
 
-set ts=2 sts=2 sw=2 expandtab
+"set ts=2 sts=2 sw=2 expandtab
 
 "set autoindent
 "set smarttab
@@ -43,6 +43,7 @@ imap <C-b> <Left>
 imap <C-e> <Esc>A
 imap <C-a> <Esc>^i
 imap <C-l> <Space>=><Space>
+imap jj <Esc>
 
 
 "editing .vimrc
@@ -52,6 +53,7 @@ if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 end
 
+map <leader>T :TlistToggle<CR>
 "opening and closing buffers
 :noremap <leader>v :botright vs<cr>
 :noremap <leader>h :sp<cr>
@@ -64,6 +66,9 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
+autocmd FileType javascript,json set ai sw=4 sts=4 et
+
+set backspace=indent,eol,start
 
 colorscheme hemingway
 "=========================================================================================
