@@ -34,3 +34,9 @@
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = http://github.com/markabe/bufexplorer.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = http://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/cucumber"]
+	path = bundle/cucumber
+	url = http://github.com/tpope/vim-cucumber.git
