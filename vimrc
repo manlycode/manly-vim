@@ -9,14 +9,24 @@ set shell=/bin/bash
 set guifont=Monaco:h12
 set guioptions-=T
 
+
+if has("gui_running")
+  colorscheme hemingway
+  set columns=100
+  set lines=90
+endif
+
 let mapleader=","
 
-"set ts=2 sts=2 sw=2 expandtab
-
-"set autoindent
-"set smarttab
-"set cindent
-"set wrap
+set shiftwidth=2              "number of spaces to use in each autoindent step
+set tabstop=2                 "two tab spaces
+set softtabstop=2             "number of spaces to skip or insert when <BS>ing or <Tab>ing
+set expandtab                 "spaces instead of tabs for better cross-editor compatibility
+set autoindent                "keep the indent when creating a new line
+set smarttab                  "use shiftwidth and softtabstop to insert or delete (on <BS>) blanks
+set cindent                   "recommended seting for automatic C-style indentation
+set autoindent                "automatic indentation in non-C files
+set wrap                      "wrap entire words, don't break them; much easier to read!
 
 set grepprg=ack
 set grepformat=%f:%l:%m
@@ -33,8 +43,6 @@ set nofoldenable
 set hidden
 set wildmenu
 
-set columns=140
-set lines=90
 
 " insert mode should be a little more like textmate
 cmap :W :w
@@ -53,28 +61,27 @@ if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 end
 
-map <leader>T :TlistToggle<CR>
 "opening and closing buffers
-:noremap <leader>v :botright vs<cr>
-:noremap <leader>h :sp<cr>
-:noremap <leader>w :Bclose<cr>
-:noremap <leader>q :bd<cr>
-:noremap <leader>f :Ack 
+noremap <leader>v :botright vs<cr>
+noremap <leader>h :sp<cr>
+noremap <leader>w :Bclose<cr>
+noremap <leader>q :bd<cr>
+noremap <leader>f :Ack 
 
-syntax on
+"syntax on
+
 if has("autocmd")
   filetype plugin indent on
 endif
 
 autocmd FileType javascript,json set ai sw=4 sts=4 et
+autocmd FileType cucumber set ai sw=2 sts=2 et
 
 set backspace=indent,eol,start
 
-colorscheme hemingway
 "=========================================================================================
 " Plugin Configuration
 "=========================================================================================
-
 " Command-t
 set wildignore+=*.o,*.obj,.git,vendor/rails/**,*/plugins/*
 
@@ -97,5 +104,9 @@ map <leader>d :execute 'NERDTreeToggle ' .getcwd()<CR>
 " find a way to map :NERDTreeFind (how does TM do it?)
 
 " Tlist
+map <leader>T :TlistToggle<CR>
 let Tlist_GainFocus_On_ToggleOpen=1
 let Tlist_WinWidth=55
+
+" Match IT
+runtime! macros/matchit.vim

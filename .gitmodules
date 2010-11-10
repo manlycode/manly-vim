@@ -40,3 +40,18 @@
 [submodule "bundle/cucumber"]
 	path = bundle/cucumber
 	url = http://github.com/tpope/vim-cucumber.git
+[submodule "bundle/rails"]
+	path = bundle/rails
+	url = http://github.com/tpope/vim-rails.git
+[submodule "bundle/gist"]
+	path = bundle/gist
+	url = http://github.com/vim-scripts/Gist.vim.git
+[submodule "bundle/slurper"]
+	path = bundle/slurper
+	url = http://github.com/alowe/vim-slurper.git
+[submodule "bundle/markdown-preview"]
+	path = bundle/markdown-preview
+	url = https://github.com/robgleeson/vim-markdown-preview.git
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = https://github.com/edsono/vim-matchit.git
