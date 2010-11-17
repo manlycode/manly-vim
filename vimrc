@@ -28,8 +28,8 @@ set cindent                   "recommended seting for automatic C-style indentat
 set autoindent                "automatic indentation in non-C files
 set wrap                      "wrap entire words, don't break them; much easier to read!
 
-set grepprg=ack
-set grepformat=%f:%l:%m
+"set grepprg=ack
+"set grepformat=%f:%l:%m
 
 set number
 
