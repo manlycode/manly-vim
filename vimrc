@@ -83,7 +83,7 @@ set backspace=indent,eol,start
 " Plugin Configuration
 "=========================================================================================
 " Command-t
-set wildignore+=*.o,*.obj,.git,vendor/rails/**,*/plugins/*
+set wildignore+=*.o,*.obj,.git,log/**,vendor/**,*/plugins/*
 
 " Delimit Mate
 let delimitMate_expand_cr = 1
